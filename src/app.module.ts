@@ -50,27 +50,3 @@ import { UserModule } from './user/user.module'
   providers: [],
 })
 export class AppModule {}
-
-// {
-//   "message": "missing FROM-clause entry for table \"accounts\"",
-//   "locations": [
-//     {
-//       "line": 3,
-//       "column": 3
-//     }
-//   ],
-//   "path": [
-//     "accounts"
-//   ],
-//   "extensions": {
-//     "code": "INTERNAL_SERVER_ERROR",
-//     "stacktrace": [
-//       "error: missing FROM-clause entry for table \"accounts\"",
-//       "    at /Users/princeofori/workspace/purshew/node_modules/.pnpm/pg@8.11.5/node_modules/pg/lib/client.js:526:17",
-//       "    at processTicksAndRejections (node:internal/process/task_queues:95:5)",
-//       "    at /Users/princeofori/workspace/purshew/node_modules/.pnpm/drizzle-orm@0.30.8_@types+pg@8.11.5_pg@8.11.5/node_modules/src/node-postgres/session.ts:66:19",
-//       "    at target (/Users/princeofori/workspace/purshew/node_modules/.pnpm/@nestjs+core@10.3.7_@nestjs+common@10.3.7_@nestjs+platform-express@10.3.7_reflect-metadata@0.2.2_rxjs@7.8.1/node_modules/@nestjs/core/helpers/external-context-creator.js:74:28)",
-//       "    at Object.accounts (/Users/princeofori/workspace/purshew/node_modules/.pnpm/@nestjs+core@10.3.7_@nestjs+common@10.3.7_@nestjs+platform-express@10.3.7_reflect-metadata@0.2.2_rxjs@7.8.1/node_modules/@nestjs/core/helpers/external-proxy.js:9:24)"
-//     ]
-//   }
-// }
