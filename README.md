@@ -17,49 +17,49 @@
 
 1. clone the repo
 
-    ```bash
-    git clone https://github.com/kwadwoatta/purshew.git
-    ```
+   ```bash
+   git clone https://github.com/kwadwoatta/purshew.git
+   ```
 
 2. cd into the repo
 
-    ```bash
-    cd purshew
-    ```
+   ```bash
+   cd purshew
+   ```
 
 3. copy .env.example to .env and fill them out
 
 4. install all dependencies
 
-    ```bash
-    pnpm install
-    ```
+   ```bash
+   pnpm install
+   ```
 
 5. [download docker](https://www.docker.com/products/docker-desktop/)
 
 6. start the postgres (database) service
 
-    ```bash
-    docker compose up -d
-    ```
+   ```bash
+   docker compose up -d
+   ```
 
 7. generate SQL migrations for the drizzle schema definitions
 
-    ```bash
-    pnpm drizzle-kit generate:pg
-    ```
+   ```bash
+   pnpm drizzle-kit generate:pg
+   ```
 
 8. push the generated SQL migrations to the postgres database
 
-    ```bash
-    pnpm tsx db/migrate.ts
-    ```
+   ```bash
+   pnpm tsx db/migrate.ts
+   ```
 
 9. seed the transaction templates
 
-    ```bash
-    pnpm tsx db/seed.ts
-    ```
+   ```bash
+   pnpm tsx db/seed.ts
+   ```
 
 10. (optional) start the drizzle-kit studio to interact with your database
 
@@ -92,7 +92,9 @@
 14. copy access token and set as Header for subsequent requests
 
     ```graphql
-    Authorization: Bearer {your access token}
+      {
+      "Authorization": "Bearer {your access token}"
+      }
     ```
 
 15. execute template for Kwame's initial opening balance
