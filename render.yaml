@@ -1,0 +1,45 @@
+# Exported from Render on 2024-07-04T08:01:11Z
+services:
+- type: web
+  name: accounting-api
+  runtime: node
+  repo: https://github.com/adhamaa/purshew
+  plan: free
+  envVars:
+  - key: REDIS_PORT
+    sync: false
+  - key: REDIS_HOST
+    sync: false
+  - key: POSTGRES_USER
+    sync: false
+  - key: POSTGRES_PORT
+    sync: false
+  - key: POSTGRES_PASSWORD
+    sync: false
+  - key: POSTGRES_DB
+    sync: false
+  - key: PORT
+    sync: false
+  - key: NODE_OPTIONS
+    sync: false
+  - key: JWT_SECRET
+    sync: false
+  - key: DB_URL
+    sync: false
+  region: singapore
+  buildCommand: pnpm install --frozen-lockfile; pnpm drizzle:generate; pnpm drizzle:push; pnpm db:seed; pnpm run build
+  startCommand: pnpm run start
+version: "1"
+
+# Exported from Render on 2024-07-04T08:04:27Z
+databases:
+- name: accounting-postgresql
+  databaseName: adhamaa_db_i74q
+  user: adhamaa
+  plan: free
+  region: singapore
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "16"
+version: "1"
