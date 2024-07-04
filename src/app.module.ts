@@ -26,6 +26,7 @@ import { UserModule } from './user/user.module'
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       debug: true,
       playground: true,
+      introspection: true,
       sortSchema: true,
       resolvers: { JSON: GraphQLJSON },
       // formatError: (error: GraphQLFormattedError) => {
