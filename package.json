@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "drizzle:generate": "drizzle-kit generate:pg",
+    "drizzle:generate": "drizzle-kit generate",
     "drizzle:push": "tsx db/migrate.ts",
     "db:seed": "tsx db/seed.ts",
     "db:dev:rm": "docker compose rm dev-db -s -f -v",
