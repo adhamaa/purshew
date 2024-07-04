@@ -24,6 +24,8 @@ import { UserModule } from './user/user.module'
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      debug: true,
+      playground: true,
       sortSchema: true,
       resolvers: { JSON: GraphQLJSON },
       // formatError: (error: GraphQLFormattedError) => {
@@ -49,4 +51,4 @@ import { UserModule } from './user/user.module'
   ],
   providers: [],
 })
-export class AppModule {}
+export class AppModule { }
